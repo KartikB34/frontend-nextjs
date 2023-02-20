@@ -16,6 +16,7 @@ const Layout = ({children}) => {
         <meta
           content="ethereum workshops"
         />
+          <title>Luster | upskilling web3 enthusiasts</title>
       </Head>
       <div className='bg-gradient-to-br from-indigo-900 via-gray-900 to-slate-900 text-white overflow-x-hidden'>
         <Navbar />
