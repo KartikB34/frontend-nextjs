@@ -16,7 +16,7 @@ const login = ({redirectType}) => {
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const googleSignUp = async(e) => {
       e.preventDefault()
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/v1/user/googleSignup?client=luster.network`);
+      const response = await axios.get(`http://api.luster.network//api/v1/user/googleSignup?client=luster.network`);
       console.log(response);
       window.location.replace(response.data.reDirectURL) 
     }
@@ -30,7 +30,7 @@ const login = ({redirectType}) => {
             const email = userInfo.email
             const password = userInfo.password
           try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/v1/user/login`, {
+            const response = await axios.post(`http://api.luster.network//api/v1/user/login`, {
               email,
               password,
             }).catch(function(error){

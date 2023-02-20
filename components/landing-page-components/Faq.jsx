@@ -1,7 +1,10 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import {BsPlusLg, BsClock} from "react-icons/bs"
 
 const Faq = () => {
+
+    const router = useRouter()
 
     const content = [
         {
@@ -51,7 +54,7 @@ const Faq = () => {
     {content.map((item, i) => {
         return (
         <>
-        <div key={item.ques} className='overflow-hidden md:mx-24'>
+        <div key={item.ques} className={`overflow-hidden md:mx-24 ${router.pathname==="/bootcamps/solana-mini" &&  (i==2 || i==6 || i==7)?"hidden":"block"}`}>
             <label>
             <input className='absolute opacity-0 peer' type="checkbox"></input>
             <div className='flex items-center cursor-pointer border rounded-xl border-white justify-between'>

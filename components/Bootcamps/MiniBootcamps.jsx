@@ -10,7 +10,7 @@ const MiniBootcamps = () => {
     <section id='bootcamp' className='md:p-24 '>
       <div className='box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF]'>
 
-        <p className='text-5xl mt-24 md:text-7xl font-semibold'>Mini Bootcamp</p>
+        <p className='text-5xl mt-24 md:text-7xl font-semibold'>Mini Bootcamps</p>
 
         <div className='flex flex-wrap items-center justify-center gap-6 py-16 mb-24'>
 

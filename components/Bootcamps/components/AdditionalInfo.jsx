@@ -13,13 +13,13 @@ const AdditionalInfo = () => {
     <div>
         <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
             {/* <Image src={bluehex} alt="hex" className='hidden md:block absolute right-4 h-[10rem] w-[10rem]' /> */}
-            <div className='text-center text-4xl md:text-6xl md:px-16 z-10'>
+            <div className='text-center text-2xl md:text-5xl md:px-16 z-10'>
                 <h3>Web3 development can bring revolution in your salaries!</h3>
             </div>
         </div>
 
         <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
-            <div className="text-center text-4xl md:text-6xl md:px-16 z-10">
+            <div className="text-center text-2xl md:text-5xl md:px-16 z-10">
                 <p>Come make your <span className='hr3'>Career</span></p> 
                 <p>in <span className='hr3'>Web3</span></p>
             </div>
@@ -35,7 +35,7 @@ const AdditionalInfo = () => {
 
             <div className="col-span-1 place-self-center">
                 <span className='text-3xl md:text-5xl font-semibold'>Thinking about switching career?</span>
-                <p className='text-2xl md:text-4xl'>Pick Web3 development!</p>
+                <p className='text-2xl md:text-2xl mt-3'>Pick Web3 development!</p>
                 <p className='text-xl md:text-3xl my-8 md:my-12'>What is holding you back?</p>
                 <Link href='/register' className='h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center'>
                     Register now!
@@ -46,7 +46,7 @@ const AdditionalInfo = () => {
         <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
             <Image src={blubo} alt="blubo" className='hidden md:block absolute left-4 h-[10rem] w-[10rem]' />
             <div className='text-center flex flex-col items-center justify-center md:px-16 z-10'>
-                <p className='text-4xl mb-6 md:mb-0 md:text-5xl'><span className='hr2'>Third batch for</span> <span className='hr3'>Web3</span> <span className='hr2'>Enthusiasts</span></p>
+                <p className='text-2xl mb-6 md:5b-0 md:text-5xl'><span className='hr2'>Third batch for</span> <span className='hr3'>Web3</span> <span className='hr2'>Enthusiasts</span></p>
                 <p className='text-2xl md:text-3xl md:w-[70%] text-center'>A project orientated program for working professionals and students on weekends </p>
             </div>
             <Image src={blubn} alt="blubn" className='hidden md:block absolute right-4 h-[10rem] w-[10rem]' />

@@ -14,6 +14,7 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
+    "airtable": "^0.11.6",
     "aos": "^2.3.4",
     "axios": "^1.2.2",
     "cookies-next": "^2.1.1",

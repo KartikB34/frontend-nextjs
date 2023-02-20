@@ -13,7 +13,7 @@ const Google = ({ setCookie }) => {
 
     // const API = process.env.REACT_APP_API_ENDPOINT;
     // const API = "https://cryptonaukribackendtest.herokuapp.com";              // Will work on LocalHost
-    const API = "https://api.cryptonaukri.com";
+    const API = "http://api.luster.network";
     const { code } = router.query
     const sendBackend = async (code) => {
         const response = await Axios.get(`${API}/api/v1/user/googleUserInfo?client=localhost`, {
