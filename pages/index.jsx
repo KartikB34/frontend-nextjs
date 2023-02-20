@@ -9,11 +9,12 @@ import Reviews from "../components/Bootcamps/Reviews"
 import Fees from "../components/Bootcamps/Fees"
 import Backbone from "../components/Bootcamps/Backbone"
 import Partners from "../components/Bootcamps/components/Partners"
-
+import Head from 'next/head'
 const Home = () => {
   return (
     // <div className="bg-[#1E1E1E]">
-    <div>
+    <>
+        
         <Landing />
         <MiniBootcamps />
         <Bootcamps />
@@ -25,7 +26,7 @@ const Home = () => {
         <Partners />
         <Solution />
         <Faq />
-    </div>
+    </>
   );
 }
 
