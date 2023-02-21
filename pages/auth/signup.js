@@ -54,7 +54,7 @@ const Signup = () => {
     setOtp('');
     if (email && password && firstName && lastName && phoneNumber && location) {
       try {
-        const response = await fetch(`https://api.cryptonaukri.com/api/v1/user/otp?email=${email}`, {
+        const response = await fetch(`https://api.luster.network.com/api/v1/user/otp?email=${email}`, {
           method: 'GET',
           mode: 'cors',
         })
@@ -105,7 +105,7 @@ const Signup = () => {
       setLoading(true);
       setSignUpError();
       try {
-        const response = await fetch(`https://api.cryptonaukri.com/api/v1/user/signup`, {
+        const response = await fetch(`https://api.luster.network.com/api/v1/user/signup`, {
           method: 'POST',
           mode : "cors",
           headers: {
@@ -137,7 +137,7 @@ const Signup = () => {
         }
         if (data.userAdded === true) {
           try {
-            const response = await Axios.post(`https://api.cryptonaukri.com/api/v1/user/login`, {
+            const response = await Axios.post(`https://api.luster.network.com/api/v1/user/login`, {
               email,
               password,
             });
@@ -186,7 +186,7 @@ const Signup = () => {
   const googleSignup = async (e) => {
     //setLoading(true);
     e.preventDefault()
-    const response = await Axios.get("https://api.cryptonaukri.com/api/v1/user/googleSignup?client=localhost");
+    const response = await Axios.get("https://api.luster.network.com/api/v1/user/googleSignup?client=localhost");
     console.log(response);
     window.location.replace(response.data.reDirectURL)
   }

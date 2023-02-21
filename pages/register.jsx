@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import {MdOutlineArrowBackIosNew} from "react-icons/md"
-
+import Airtable from 'airtable'
 import axios from "axios";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,20 +8,21 @@ import { useRouter } from "next/router";
 
 import {IoIosArrowBack ,IoIosArrowForward} from "react-icons/io"
 
+const base = new Airtable({apiKey: process.env.NEXT_PUBLIC_API_KEY}).base('appVO0xf2gHJcrGJI')
+
 const Register = () => {
 
     const router = useRouter()
     
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [org, setOrg] = useState('');
-    const [number, setNumber] = useState();
-    const [exp, setExp] = useState('Beginner');
-    const [bootcamp, setBootcamp] = useState('');
-    const [city, setCity] = useState('');
-    const [state, setState] = useState('');
-    const [referral, setReferral] = useState('');
-    const [coupon, setCoupon] = useState('');
+    const [user, setUser] = useState({
+      'name': '',
+      'phone_no': '',
+      'email': '',
+      'experience': '',
+      'city': '',
+      'coupon': '',
+      'bootcamp': ''
+    })
     const [loading, setLoading] = useState(false);
 
     const [step, setStep] = useState(1)
@@ -30,39 +31,33 @@ const Register = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if(name && email && number && exp && city && state) {
-        
-        const data = {
-          Name: name,
-          Email: email,
-          Organisation: org,
-          Contact: number,
-          Experience: exp,
-          City: city,
-          State: state,
-          Referral: referral,
-          Registering_For: bootcamp,
-          Coupon:coupon
-        }
-        setLoading(true);
 
-        axios.post('https://sheet.best/api/sheets/62f3c87d-f9a6-465d-bc16-6d5904f3857e',data).then((response)=>{
-          // console.log(response);
-          setName("");
-          setEmail("");
-          setNumber(0);
-          setExp("Beginner");
-          setCity("");
-          setState("");
-          setReferral("");
-          setBootcamp("");
-          setCoupon("");
-          setLoading(false)
-          toast.success("Form submitted successfully!");
-          router.push("/");
-        })
+      if(user.name && user.email && user.phone_no && user.experience && user.city && user.bootcamp) {
+        setLoading(true);  
+        base('register').create([
+          {
+              fields : {
+                  name: user.name,
+                  email: user.email,
+                  phone_no: '+91' + user.phone_no,
+                  city: user.city,
+                  experience: user.experience,
+                  bootcamp: user.bootcamp,
+                  coupon: user.coupon
+              }
+          }
+        ], function(err, records) {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          records.forEach(function (record) {
+            console.log(record.getId());
+            console.log(user)
+          });
+        });
+        setLoading(false)
 
-        // toast.error("Form submission failed!");
 
       } else{
         toast.error("Please fill all the values");
@@ -92,21 +87,21 @@ const Register = () => {
             <form >
               <div className='my-4 '> 
                 <p className='ml-2 mb-2 text-[16px]'>Name*</p>
-                <input required={true} onChange={(e) => setName(e.target.value)} value={name} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input required={true} onChange={(e) => setUser({...user, name:e.target.value})} value={user.name} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
 
               <div className='my-4 '>
               <p className='ml-2 mb-2 text-[16px]'>Email*</p>
-              <input onChange={(e) => setEmail(e.target.value)} required={true} value={email} type="email" className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+              <input onChange={(e) => setUser({...user, email: e.target.value})} required={true} value={user.email} type="email" className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
           
               <div className='my-4 '>
                 <p className='ml-2 mb-2 text-[16px]'>Phone Number*</p>
-                <input onChange={(e) => setNumber(e.target.value)} required={true} type="tel" value={number} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
               
               <div>
-                <button disabled={!(name && email && number)} onClick={() => setStep(step+1)} className="flex text-white items-center text-lg hover:cursor-pointer">
+                <button disabled={!(user.name && user.email && user.phone_no)} onClick={() => setStep(step+1)} className="flex text-white items-center text-lg hover:cursor-pointer">
                  next➡️ 
                 </button>
               </div>
@@ -123,8 +118,8 @@ const Register = () => {
                 <p className='ml-2 mb-2 text-[16px]'>Your experience level*</p>
                 <select
                   defaultValue="Experience Level"
-                  onChange={(e) => setExp(e.target.value)}
-                  value={exp}
+                  onChange={(e) => setUser({...user, experience: e.target.value})}
+                  value={user.experience}
                   required={true}
                   placeholder="Experiance"
                   className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
@@ -137,20 +132,15 @@ const Register = () => {
 
             <div className='my-4 '>
                 <p className='ml-2 mb-2 text-[16px]'>City*</p>
-                <input onChange={(e) => setCity(e.target.value)} value={city} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input onChange={(e) => setUser({...user, city: e.target.value})} value={user.city} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
             </div>
-    
 
-          <div className='my-4 '>
-            <p className='ml-2 mb-2 text-[16px]'>State*</p>
-            <input onChange={(e) => setState(e.target.value)} value={state} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
-          </div>
 
           <div className="flex justify-between">
             <button onClick={() => setStep(step - 1)} className="flex text-white items-center text-lg hover:cursor-pointer">
               ⬅️back
             </button>
-            <button disabled={!(state && city)} onClick={() => setStep(step + 1)} className="flex text-white items-center text-lg hover:cursor-pointer">
+            <button disabled={!( user.city && user.experience)} onClick={() => setStep(step + 1)} className="flex text-white items-center text-lg hover:cursor-pointer">
               next➡️
             </button>
           </div>
@@ -163,7 +153,7 @@ const Register = () => {
 
           <div className='my-4 '>
             <p className='ml-2 mb-2 text-[16px]'>Coupon code/Referrals</p>
-            <input onChange={(e) => setCoupon(e.target.value)} value={coupon} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+            <input onChange={(e) => setUser({...user, coupon: user.coupon})} value={user.coupon} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
           </div>
 
           <div className='my-4 '>
@@ -171,8 +161,8 @@ const Register = () => {
                 <select
                   required={true}
                   defaultValue="Experience Level"
-                  onChange={(e) => setBootcamp(e.target.value)}
-                  value={bootcamp}
+                  onChange={(e) => setUser({...user, bootcamp: e.target.value})}
+                  value={user.bootcamp}
                   placeholder="Experiance"
                   className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
                 >
@@ -180,11 +170,12 @@ const Register = () => {
                   <option value="Solana">Solana</option>
                   <option value="Ethereum">Ethereum</option>
                   <option value="Both">Both (Solana and Ethereum)</option>
+                  <option value="Both">Solana's mini bootcamp</option>
                 </select>
             </div>
           </form>}
 
-        {step ===3 && <button disabled={!(bootcamp)} type="submit" onClick={handleSubmit} className={`border-2 w-[12rem] mr-4 border-[#003979] font-semibold rounded-full px-12 py-3 mt-7 inline-block hover:bg-[#1B2430] hover:text-white`}>{loading? "Loading..." : "SUBMIT"}</button>}
+        {step ===3 && <button disabled={!(user.bootcamp)} type="submit" onClick={handleSubmit} className={`border-2 w-[12rem] mr-4 border-[#003979] font-semibold rounded-full px-12 py-3 mt-7 inline-block hover:bg-[#1B2430] hover:text-white`}>{loading? "Loading..." : "SUBMIT"}</button>}
 
         </div>
         </div>

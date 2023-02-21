@@ -94,10 +94,10 @@ const SolanaCurriculum = () => {
   return (
     <div className='pt-8 mb-12'>
 
-        <h1 className='text-4xl md:text-6xl mb-16 text-[#006DF6] font-bold'>Curriculum</h1>
+        <h1 className='text-4xl md:text-6xl mb-16 font-bold'>Curriculum</h1>
         <div className='flex flex-col md:flex-row mb-12 md:justify-between items-center'>
             <p className='md:w-[80%] text-lg md:text-2xl'>Best in-class content by leading faculty and industry leaders in the form of live Sessions,250+ hours of learning, 10+ Web3 projects, doubt solving...</p>
-            <a href='/Solana_Curriculum.pdf' download="Solana_Curriculum.pdf" ><button className='border-2 text-xl border-[#006DF6] m-0 hover:scale-125 transition duration-300 rounded-xl px-4 py-3 bg-[#006DF6] flex items-center text-white hover:cursor-pointer'>Curriculum <IoMdDownload className='ml-2'/></button></a>
+            <a href='/Solana_Curriculum.pdf' download="Solana_Curriculum.pdf" ><button className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
         </div>
 
         <div className='flex flex-col md:flex-row items-center md:justify-center'>

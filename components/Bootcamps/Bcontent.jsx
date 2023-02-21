@@ -15,9 +15,12 @@ const Bcontent = ({content}) => {
         
     ]
     const Mentor = [
-        <div className='m-0 flex text-lg'>  Blockchain Code Developer at <Image src={truscholar_logo} alt="byjus logo" className='h-6 w-28 ml-3' /> </div>,
-        <p className='m-0 text-lg'>  Hyperledger Indy | Hyperledger Fabric</p>,
-        <p className='m-0 text-lg'>  Ethereum | SSI</p>,
+        <div className='m-0 flex text-lg'>  Blockchain Code Developer at Quantiphi </div>,
+        <div className='m-0 flex text-lg'>  Teach Lead at Luster network</div>,
+        <div className='m-0 flex text-lg'>  Blockchain (Ethereum | Hyperledger) </div>,
+        <div className='m-0 flex text-lg'>  DevOps (AWS | GCP | Docker | K8's) </div>,
+        <p className='m-0 text-lg'> <a href="https://www.youtube.com/@AkshayKurhekar" target="_blank"> Youtuber (Blockchain With Akshay Kurhekar)</a></p>,
+        <p className='m-0 text-lg'> <a href="https://dev.to/akshaykurhekar" target="_blank"> Blockchain Content Creater : Dev Community</a></p>,
     ]
     const Counsellor = (
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut velit ac nulla dignissim dignissim vel ac elit. Pellentesque cursus tortor a tellus ornare, in tempor elit placerat. Cras ut urna justo. Etiam laoreet, tellus tincidunt ornare vestibulum, nunc mi facilisis quam, non viverra diam purus eget urna. In posuere, massa non viverra elementum, ante ipsum lobortis tellus,</p>

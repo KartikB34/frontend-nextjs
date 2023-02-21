@@ -12,7 +12,7 @@ const Footer = () => {
               <Link href="/aboutus" >About Us</Link>
               <Link href="/terms" className="my-1">Terms and Conditions</Link>
               <Link href="/privacy">Privacy</Link>
-              <Link href="https://web3hack.tech/">Promotions and events</Link>
+              {/* <Link href="https://web3hack.tech/">Promotions and events</Link> */}
             </div>
 
             <div className="flex flex-col my-8 md:my-0 md:items-start">

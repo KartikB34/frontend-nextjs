@@ -7,9 +7,10 @@ const Champions = () => {
   return (
     <div className='px-8 pt-24 md:px-24 text-center'>
 
-        <p className='text-5xl md:text-5xl font-semibold'>Our Champions</p>
-        <p className='px-8 md:px-24 text-center mb-4 mt-24 text-5xl'>Whether you are a working professional or a student</p>
-        <p className='px-8 md:px-24 text-center text-5xl'>You can be in top 0.1% Web3 Developers !</p>    
+        <p className='px-8 md:px-24 text-center text-3xl'>You can be in top 0.1% Web3 Developers !</p>    
+        <p className='px-8 md:px-24 text-center mb-4 mt-4 text-3xl'>Whether you are a working professional or a student</p>
+
+        <p className='text-5xl md:text-5xl  mt-24 font-semibold'>Our Champions</p>
         <div className='grid grid-cols-1 md:grid-cols-3 py-16 gap-8'>   
 
             <div className='col-span-1 flex flex-col items-center place-self-center'>

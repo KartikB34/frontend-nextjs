@@ -170,7 +170,7 @@ const MiniSolanaCurriculum = () => {
         <h1 className='text-4xl md:text-6xl mb-16 font-bold'>Curriculum</h1>
         <div className='flex flex-col md:flex-row mb-12 md:justify-between items-center'>
             <p className='md:w-[80%] text-lg md:text-2xl'>Best in-class content by leading faculty and industry leaders in the form of live Sessions, 20+ hours of learning, 5+ Web3 projects, doubt solving...</p>
-            <a href='/Solana_mini_bootcamp_curriculum.pdf' download="Solana_mini_bootcamp_curriculum.pdf" ><button className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
+            <a href='/Ethereum_Curriculum.pdf' download="Ethereum_Curriculum.pdf" ><button className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
         </div>
 
         <div className='flex flex-col md:flex-row items-center md:justify-center'>
