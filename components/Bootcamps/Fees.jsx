@@ -34,7 +34,10 @@ const Fees = () => {
                     </div>
                 </div>
 
-                <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p>
+                {
+                    !(router.pathname === "/bootcamps/solana-mini")&&
+                    <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p>
+                }
             </div>
 
             {/* <div className="mt-8 md:mt-0 md:ml-20">
