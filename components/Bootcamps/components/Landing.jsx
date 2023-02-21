@@ -22,7 +22,7 @@ const Landing = () => {
           </div>
               <p className='mt-8 text-xl md:text-2xl'>We are on the mission to upskill 1M+ Web3 enthusiasts to Web3 developers by 2025</p>
           <div className="button md:mt-8 mt-4">
-            <a href='/register' className='h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '><button>Register now !</button></a>
+            <a href={router.pathname==="/bootcamps/solana-mini"? "/bootcamps/solana-mini/register" : "/register"} className='h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '><button>Register now !</button></a>
           </div>
       </div>
 
