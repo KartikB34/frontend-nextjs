@@ -48,7 +48,6 @@ const Header = () => {
    setLoginStatus(false)
    router.push("/")
   }
-  console.log(loginStatus)
   return(
     <nav className='w-[100%] top-0 shadow-md bg-neutral-900 bg-opacity-70 backdrop-blur-xl fixed text-[20px]'>
       <div className="py-5 sm:px-5 flex flex-row items-center justify-between px-3 md:px-24 m-auto">
