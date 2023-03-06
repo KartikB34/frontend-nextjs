@@ -162,9 +162,7 @@ const Register = () => {
                   className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
                 >
                   <option value="Select bootcamp">Select bootcamp</option>
-                  <option value="Solana">Solana</option>
                   <option value="Ethereum">Ethereum</option>
-                  <option value="Both">Both (Solana and Ethereum)</option>
                 </select>
             </div>
           </form>}

@@ -22,10 +22,6 @@ const Partners = () => {
         <Image src='/assets/ethereum.png' height={90} width={90}/>
         <h1 className='font-semibold text-3xl text-blue-400'>Ethereum</h1>
       </article>
-      <article className='flex gap-4 items-center'>
-        <Image src='/assets/solana.png' height={90} width={90}/>
-        <h1 className='font-semibold text-3xl text-purple-300'>Solana</h1>
-      </article>
     </section>
     </div>
   )

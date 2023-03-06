@@ -16,6 +16,9 @@ const Contact = () => {
             issue, please feel free to contact at{" "}
             <b className="tracking-wider text-cyan-600">support@cryptonaukri.com</b>
           </p>
+          <p>
+          Address - 244/1, Ramnagar Bondegaon, Bramhapuri, Tah. Bramhapuri, Dist. Chandrapur - 441206
+          </p>
         </div>
 
         <div className="flex flex-col items-center justify-center">
