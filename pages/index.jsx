@@ -4,7 +4,6 @@ import Perks from "../components/landing-page-components/Perks"
 import Solution from "../components/landing-page-components/Solution"
 import Faq from "../components/landing-page-components/Faq"
 import Bootcamps from "../components/Bootcamps/Bootcamps"
-import MiniBootcamps from "../components/Bootcamps/MiniBootcamps"
 import Reviews from "../components/Bootcamps/Reviews"
 import Fees from "../components/Bootcamps/Fees"
 import Backbone from "../components/Bootcamps/Backbone"
@@ -16,7 +15,6 @@ const Home = () => {
     <>
         
         <Landing />
-        <MiniBootcamps />
         <Bootcamps />
         <Champions />
         <Perks />

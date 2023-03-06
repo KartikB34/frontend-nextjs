@@ -16,6 +16,10 @@ const AboutUS = () => {
             issue, please feel free to contact at{" "}
             <b className="tracking-wider text-cyan-600">support@cryptonaukri.com</b>
           </p>
+
+          <p>
+          Address - Ramnagar Bondegaon, Bramhapuri, Tah. Bramhapuri - 441206
+          </p>
         </div>
       </div>
     </div>

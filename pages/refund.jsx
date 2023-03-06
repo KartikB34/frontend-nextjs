@@ -23,9 +23,6 @@ const Refund = () => {
                 <li>Paid fees will be refunded after cancellation</li>
             </ul>
           </p>
-          <p>
-          Address - Ramnagar Bondegaon, Bramhapuri, Tah. Bramhapuri - 441206
-          </p>
         </div>
       </div>
     </div>
