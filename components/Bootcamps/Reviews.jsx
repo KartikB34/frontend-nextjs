@@ -55,8 +55,7 @@ const Reviews = () =>{
 
   return (
   <div className='px-8 md:px-16'>
-    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center'>Reviews</p>
-    <div className='h-[1px] w-[15rem] mb-16 bg-white m-auto'></div>
+    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center underline'>Reviews</p>
     <div className='block md:hidden w-[95%] mx-auto'>
     <Swiper
              slidesPerView={1}
@@ -75,6 +74,7 @@ const Reviews = () =>{
                             src={person.image}
                             alt="Landscape picture"
                             className="w-[15rem] rounded-full object-cover h-[15rem]"
+                            lazy={true}
                         />
                         </picture>
                         <p className='text-2xl my-4'>{person.name}</p>

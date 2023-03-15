@@ -102,10 +102,15 @@ const EthereumCurriculum = () => {
             <a href='/Ethereum_Curriculum.pdf' download="Ethereum_Curriculum.pdf" ><button className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
         </div>
 
-        <div className='flex flex-col md:flex-row items-center md:justify-center'>
+        <div className='flex flex-col md:flex-row items-center md:justify-center bg-gradient-to-r from-indigo-900 to-slate-900 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md border-2'>
             <div className='items-center text-xl my-3 text-center md:mr-12'>
-                <p className='text-neutral-100 font-semibold mb-2'>250+</p>
+                <p className='text-neutral-100 font-semibold mb-2'>100+</p>
                 <p className='font-semibold'>Hours of learning</p>
+            </div>
+
+            <div className='items-center text-xl my-3 text-center md:mr-12'>
+                <p className='text-neutral-100 font-semibold mb-2'>2 months</p>
+                <p className='font-semibold'>Duration</p>
             </div>
 
             <div className='items-center text-xl my-3 md:mr-12 text-center'>
@@ -115,7 +120,7 @@ const EthereumCurriculum = () => {
 
             <div className='items-center text-xl my-3 md:mr-12 text-center'>
                 <p className='text-neutral-100 font-semibold mb-2'>100%</p>
-                <p className='font-semibold'>Placement</p>
+                <p className='font-semibold'>Placement assitance</p>
             </div>
 
             <div className='items-center text-xl my-3 text-center'>

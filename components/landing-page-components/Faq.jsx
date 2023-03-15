@@ -48,8 +48,7 @@ const Faq = () => {
   return (
     <div className='px-8 md:px-24'>
 
-        <p className='text-7xl text-center mt-24'>FAQs</p>
-        <div className='h-1 m-auto w-[15rem] bg-white mb-24'></div>
+        <p className='text-center text-7xl text-left mt-24 underline mb-[2.5rem]'>FAQs</p>
 
     {content.map((item, i) => {
         return (

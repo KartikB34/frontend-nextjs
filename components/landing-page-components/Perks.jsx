@@ -3,31 +3,27 @@ import Image from 'next/image'
 
 const Perks = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 py-2 md:pt-20 my-[7rem] gap-5 px-8 md:p-4 '>
+    <div className='grid grid-cols-1 md:grid-cols-2 py-2 md:pt-20 my-[7rem] gap-5 md:w-[85%] w-[90%] mx-auto'>
       
-      <div className="col-span-1 place-self-center pl-3 md:pl-16">
-        <p className="text-4xl md:text-7xl font-semibold mb-3">Perks of learning web3</p>
-        
-        <div className='flex items-center text-xl md:text-3xl py-2'>
-            <div className='bg-white rounded-full h-8 w-8 mr-3'></div>
+      <div className='col-span-1'>
+        <p class="text-4xl md:text-7xl font-semibold mb-3">Perks of learning web3</p>
+        <ul class="list-disc">
+          <li class="flex items-center text-xl md:text-3xl py-2">
             <p>No 4 year degree</p>
-        </div>
-        <div className='flex items-center text-xl md:text-3xl py-2'>
-            <div className='bg-white rounded-full h-8 w-8 mr-3'></div>
+          </li>
+          <li class="flex items-center text-xl md:text-3xl py-2">
             <p>Mostly remote</p>
-        </div>
-        <div className='flex items-center text-xl md:text-3xl py-2'>
-            <div className='bg-white rounded-full h-8 w-8 mr-3'></div>
+          </li>
+          <li class="flex items-center text-xl md:text-3xl py-2">
             <p>Job market is global</p>
-        </div>
-        <div className='flex items-center text-xl md:text-3xl py-2'>
-            <div className='bg-white rounded-full h-8 w-8 mr-3'></div>
+          </li>
+          <li class="flex items-center text-xl md:text-3xl py-2">
             <p>Demand is extremely high!</p>
-        </div>
-        <div className='flex items-center text-xl md:text-3xl py-2'>
-            <div className='bg-white rounded-full h-8 w-8 mr-3'></div>
+          </li>
+          <li class="flex items-center text-xl md:text-3xl py-2">
             <p>You can choose to be anonymous</p>
-        </div>
+          </li>
+        </ul>
       </div>
 
       <div className="col-span-1 hidden md:block place-self-center">

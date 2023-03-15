@@ -11,8 +11,8 @@ import Link from 'next/link'
 const AdditionalInfo = () => {
   return (
     <div>
-        <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
-            {/* <Image src={bluehex} alt="hex" className='hidden md:block absolute right-4 h-[10rem] w-[10rem]' /> */}
+        {/* <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
+            <Image src={bluehex} alt="hex" className='hidden md:block absolute right-4 h-[10rem] w-[10rem]' />
             <div className='text-center text-2xl md:text-5xl md:px-16 z-10'>
                 <h3>Web3 development can bring revolution in your salaries!</h3>
             </div>
@@ -26,7 +26,7 @@ const AdditionalInfo = () => {
             <div className="image">
                 <Image src={whitehex} alt="hex" className='hidden md:block absolute left-4 top-3 h-[10rem] w-[10rem]' />
             </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 px-4 md:px-0 md:grid-cols-2 min-h-[94vh]">
             <div className='col-span-1 place-self-center'>
