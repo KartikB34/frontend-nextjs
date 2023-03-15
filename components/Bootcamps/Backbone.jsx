@@ -53,7 +53,7 @@ const Backbone = () => {
   return (
     <>
       <div className="flex flex-col text-center min-h-[90vh] mb-16">
-        <span className=' m-auto w-full text-3xl md:text-5xl'>Meet Your Backbone</span>
+        <span className=' m-auto w-full text-3xl md:text-5xl underline'>Meet Your Backbone</span>
 
         <div className="flex flex-col w-full justify-center">
             <div className="w-[100%] mt-6 mb-16">

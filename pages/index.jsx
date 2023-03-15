@@ -5,7 +5,6 @@ import Solution from "../components/landing-page-components/Solution"
 import Faq from "../components/landing-page-components/Faq"
 import Bootcamps from "../components/Bootcamps/Bootcamps"
 import Reviews from "../components/Bootcamps/Reviews"
-import Fees from "../components/Bootcamps/Fees"
 import Backbone from "../components/Bootcamps/Backbone"
 import Partners from "../components/Bootcamps/components/Partners"
 import Head from 'next/head'
@@ -20,7 +19,6 @@ const Home = () => {
         <Perks />
         <Backbone />
         <Reviews />
-        <Fees />
         <Partners />
         <Solution />
         <Faq />
