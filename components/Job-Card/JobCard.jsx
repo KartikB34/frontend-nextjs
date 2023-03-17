@@ -14,8 +14,8 @@ const JobCard = (props) => {
 
   return (
     // min-h-min
-    <div className="bg-gray-700 min-h-min flex flex-col justify-between shadow-md grow shrink basis-80 py-3 px-2 border border-gray-900 rounded-lg">
-        <div>
+    <div className=" bg-gradient-to-r from-indigo-800 to-indigo-900 filter backdrop-blur-xl min-h-min flex flex-col justify-between shadow-lg grow shrink basis-80 p-6 border border-gray-900 rounded-lg">
+        <div className='opacity-100'>
             <div className="text-lg sm:text-xl font-semibold">{props.position}</div>
             <div className="mt-1">{props.cmp}</div>
             <div className="mt-2">{(props.description).substr(0, 120)}...</div>
@@ -26,7 +26,7 @@ const JobCard = (props) => {
                 <div><span className="font-bold">{props.exp}</span>{" "}experience</div>
             </div>
             <div className=''>
-                <button onClick={handleApply} className="px-3 py-2 hover:text-white border border-black rounded-md hover:bg-gray-900">Details</button>
+                <button className="px-3 py-2 hover:text-white border border-black rounded-md hover:bg-gray-900">Details</button>
             </div>
         </div>
     </div>
