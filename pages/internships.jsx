@@ -13,13 +13,12 @@ export async function getStaticProps() {
     // will receive `posts` as a prop at build time
     return {
       props: {
-        posts,
       },
     }
 }
 
-const InternshipPage = ({posts}) => {
-    const [dataArr, setDataArr] = useState(posts.data);
+const InternshipPage = () => {
+    // const [dataArr, setDataArr] = useState(posts.data);
     const [loading, setLoading] = useState(false);
     // const [datarr, setDataArr] = React.useState([]);
 
@@ -44,7 +43,7 @@ const InternshipPage = ({posts}) => {
         <div className="pt-24 min-h-[90vh]">
         <div className="text-white p-4 max-w-7xl m-auto">
             <div className="text-white text-lg bg-gray-800 p-2 w-fit border rounded-md">Discover Internships</div>
-            <div className="mt-3 flex flex-wrap gap-3">
+            {/* <div className="mt-3 flex flex-wrap gap-3">
                 {
                     loading === true ?
                     <>
@@ -74,7 +73,7 @@ const InternshipPage = ({posts}) => {
                         }
                     </>
                 }
-            </div>
+            </div> */}
         </div>
     </div>
     )

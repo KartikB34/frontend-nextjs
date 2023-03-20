@@ -55,7 +55,7 @@ const Reviews = () =>{
 
   return (
   <div className='px-8 md:px-16'>
-    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center underline'>Reviews</p>
+    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center'>Reviews</p>
     <div className='block md:hidden w-[95%] mx-auto'>
     <Swiper
              slidesPerView={1}

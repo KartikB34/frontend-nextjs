@@ -5,9 +5,9 @@ import axios from 'axios';
 
 
 
-const JobsPage = ({posts}) => {
+const JobsPage = () => {
     
-    const [dataArr, setDataArr] = useState(posts.data);
+    //const [dataArr, setDataArr] = useState(posts.data);
     const [loading, setLoading] = useState(false);
 
     // console.log("1234")
@@ -34,7 +34,7 @@ const JobsPage = ({posts}) => {
         <div className="pt-24 min-h-[90vh]">
             <div className="text-white p-4 max-w-7xl m-auto">
                 <div className="text-white text-lg flex justify-center items-center  p-2 w-fit border rounded-md">Discover Jobs</div>
-                <div className="mt-3 flex flex-wrap gap-3">
+                {/* <div className="mt-3 flex flex-wrap gap-3">
                     {
                         loading === true ?
                         <>
@@ -64,7 +64,7 @@ const JobsPage = ({posts}) => {
                             }
                         </>
                     }
-                </div>
+                </div> */}
             </div>
         </div>
     )
@@ -73,14 +73,17 @@ const JobsPage = ({posts}) => {
 export async function getStaticProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/v1/jobs/findJob`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/v1/jobs/findJob`,  {
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'User-Agent': '*',
+        }})
     const posts = await res.json()
   
     // By returning { props: { posts } }, the Blog component
     // will receive `posts` as a prop at build time
     return {
       props: {
-        posts,
       },
     }
 }
