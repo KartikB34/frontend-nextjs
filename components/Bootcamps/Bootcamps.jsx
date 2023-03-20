@@ -8,7 +8,7 @@ const Bootcamps = () => {
 
   return (
     <section id='bootcamp' className='md:p-24 '>
-      <div className='box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF]'>
+      <div className='box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF] rounded-md'>
 
         <p className='text-5xl mt-24 md:text-7xl font-semibold'>Bootcamps</p>
 

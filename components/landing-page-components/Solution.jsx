@@ -27,7 +27,7 @@ const Solution = () => {
 
   return (
     <div className='mx-8 md:mx-24 border-white md:mt-[12rem] mb-24 pb-12'>
-        <p className='text-6xl font-semibold text-center my-12 underline'>Why us?</p>
+        <p className='text-6xl font-semibold text-center my-12'>Why us?</p>
 
         <div className=' flex flex-row md:flex-col items-center justify-center '>
 

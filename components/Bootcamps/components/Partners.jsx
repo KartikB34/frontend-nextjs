@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const Partners = () => {
   return (<div className='flex flex-col items-center justify-center my-5 mt-[8rem]'>
-    <p className='text-center text-xl md:text-5xl font-semibold underline mb-[2.5rem]'>Our Partners</p>
+    <p className='text-center text-xl md:text-5xl font-semibold mb-[2.5rem]'>Our Partners</p>
     <section className='flex flex-wrap justify-center gap-6 w-[75%] mx-auto'>
       <article>
         <Image src='/assets/sphereon.png' height={300} width={300}/>

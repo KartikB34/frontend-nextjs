@@ -58,27 +58,27 @@ const Header = () => {
             <div className={`md:none ${active? 'show':'hide'} `}>
                 <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md">
                     <ul className="bg-gray-900 flex flex-col items-center text-lg rounded-md transition-all">
-                        <li className="p-1 cursor-pointer "><a href="#bootcamps" className="">Bootcamps</a></li>
-                        <li className="p-1 cursor-pointer "><Link href="/jobs" className="">Jobs</Link></li>
-                        <li className="p-1 cursor-pointer "><Link href="/internships" className="">Internships</Link></li>
+                        <li className="p-1 cursor-pointer "><Link href="/bootcamps/ethereum" className="">Bootcamp</Link></li>
+                        {/* <li className="p-1 cursor-pointer "><Link href="/jobs" className="">Jobs</Link></li>
+                        <li className="p-1 cursor-pointer "><Link href="/internships" className="">Internships</Link></li> */}
                         <li className="p-1 cursor-pointer "><Link href="/aboutus" className="">About us</Link></li>
                     </ul>
                 </div>
             </div>
             <div className="hidden md:block" >
                   <ul className="flex gap-8">
-                    <li className="cursor-pointer  hover:underline hover:underline-offset-4">
-                      <a href={`${router.pathname==="/"?"#bootcamp" : "/"}`} className="">Bootcamps</a>
+                    <li className="cursor-pointer  hover:underline transition-all hover:underline-offset-4">
+                      <Link href="/bootcamps/ethereum" className="">Bootcamp</Link>
                     </li>
-                    <li className="cursor-pointer  hover:underline hover:underline-offset-4">
+                    {/* <li className="cursor-pointer  hover:underline hover:underline-offset-4">
                       <a href="/jobs" className="">Jobs</a>
                     </li>
 
                     <li className="cursor-pointer  hover:underline hover:underline-offset-4">
                       <a href="/internships" className="">Internships</a>
-                    </li>
+                    </li> */}
 
-                    <li className="cursor-pointer  hover:underline hover:underline-offset-4">
+                    <li className="cursor-pointer  hover:underline transition-all hover:underline-offset-4">
                       <a href="/aboutus" className="">About us</a>
                     </li>
 
