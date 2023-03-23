@@ -5,7 +5,7 @@ import {BsSearch} from "react-icons/bs"
 
 const Landing = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2  mx-auto items-center py-32 my-9 gap-5 min-h-[100vh] w-[75%]  md:p-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2  mx-auto items-center md:py-32 py-6 my-9 gap-5 min-h-[100vh] w-[75%]  md:p-4'>
       
       <div className="col-span-1 mt-12 place-self-center md:w-[80%]">
         <p className="text-5xl md:text-7xl font-semibold">Learn Web3,</p>
@@ -31,7 +31,7 @@ const Landing = () => {
       </div>
 
       <div className="col-span-1 place-self-center">
-        <Image src="/assets/landing.png" alt="web_landing" width={700} height={700}  className="h-[90%] w-[90%] mx-auto" />
+        <Image src="/assets/landing.png" alt="web_landing" width={800} height={800}  className="h-[90%] w-[90%] mx-auto" />
       </div>
       
     </div>
