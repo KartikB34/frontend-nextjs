@@ -27,7 +27,7 @@ const Perks = () => {
       </div>
 
       <div className="col-span-1 hidden md:block place-self-center">
-        <Image src='/assets/web.png'  width={500} height={500} alt="web_landing" className="md:h-[80%] md:w-[80%]" />
+        <Image src='/assets/web.png'  width={700} height={700} alt="web_landing" className="md:h-[80%] md:w-[80%]" />
       </div>
       
     </div>

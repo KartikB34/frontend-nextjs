@@ -33,28 +33,24 @@ const Bcontent = ({content}) => {
     if (content === 'Educator')
     {
         return Educator.map((item)=><div className='flex items-center md:text-xl py-2'>
-        <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
         <div>{item}</div>
     </div>)
     }
     else if (content === 'Mentor')
     {
         return Mentor.map((item)=><div className='flex items-center md:text-xl py-2'>
-        <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
         <div>{item}</div>
     </div>)
     }
     else if (content === 'Counsellor')
     {
         return Counsellor.map((item)=><div className='flex items-center md:text-xl py-2'>
-        <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
         <div>{item}</div>
     </div>)
     }
     else
     {
         return Placementcell.map((item)=><div className='flex items-center md:text-xl py-2'>
-        <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
         <div>{item}</div>
     </div>)
     }

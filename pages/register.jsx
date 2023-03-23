@@ -70,51 +70,31 @@ const Register = () => {
         <ToastContainer/>
         <div className="w-full flex flex-col items-center justify-center py-12 ">
             <h1 className="text-3xl md:text-5xl px-3 mt-3 text-center font-semibold mb-2">
-              Please fill the below form to register for
+              Register now for web3 Bootcamp
             </h1>
             <h1 className="text-3xl md:text-5xl px-3 text-center font-semibold mb-2">
-              web3 Bootcamp
+              
             </h1>
         < div className=" mt-8 rounded-2xl">
-         <div className='w-full relative md:w-[48rem] py-16 flex flex-col bg-gray-800 items-center shadow-2xl rounded-2xl px-10 md:px-0'>
+         <div className='flex flex-col bg-gradient-to-r from-indigo-900 to-blue-900  items-center justify-center shadow-md rounded-md px-[1.5rem] py-[1.5rem]'>
 
-            <div className="w-[15rem] flex justify-between mb-4 items-center md:w-[24rem]">
-              <div onClick={()=>{setStep(step-1)}} className={`${step===3? "visible" : "invisible"} flex items-center hover:cursor-pointer text-lg`}>⬅️back</div>
-              <div className="">Step: {step}/3</div>
-            </div>
-
-            { step===1 && 
-            <form >
-              <div className='my-4 '> 
+            <form className="flex flex-col gap-5">
+              <div className=''> 
                 <p className='ml-2 mb-2 text-[16px]'>Name*</p>
                 <input required={true} onChange={(e) => setUser({...user, name:e.target.value})} value={user.name} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
 
-              <div className='my-4 '>
+              <div className=''>
               <p className='ml-2 mb-2 text-[16px]'>Email*</p>
               <input onChange={(e) => setUser({...user, email: e.target.value})} required={true} value={user.email} type="email" className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
           
-              <div className='my-4 '>
+              <div className=''>
                 <p className='ml-2 mb-2 text-[16px]'>Phone Number*</p>
                 <input onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
-              
-              <div>
-                <button disabled={!(user.name && user.email && user.phone_no)} onClick={() => setStep(step+1)} className="flex text-white items-center text-lg hover:cursor-pointer">
-                 next➡️ 
-                </button>
-              </div>
-            </form>}
 
-             {step === 2 && 
-             <form >
-             {/* <div className='my-4'>
-               <p className='ml-2 mb-2 text-[16px]'>Organisation/Institute</p>
-               <input required={true} onChange={(e) => setOrg(e.target.value)} value={org} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
-             </div> */}
-
-            <div className='my-4 '>
+              <div className=''>
                 <p className='ml-2 mb-2 text-[16px]'>Your experience level*</p>
                 <select
                   defaultValue="Experience Level"
@@ -129,29 +109,8 @@ const Register = () => {
                   <option value="Expert">Expert</option>
                 </select>
             </div>
-
-            <div className='my-4 '>
-                <p className='ml-2 mb-2 text-[16px]'>City*</p>
-                <input onChange={(e) => setUser({...user, city: e.target.value})} value={user.city} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
-            </div>
-
-
-          <div className="flex justify-between">
-            <button onClick={() => setStep(step - 1)} className="flex text-white items-center text-lg hover:cursor-pointer">
-              ⬅️back
-            </button>
-            <button disabled={!( user.city && user.experience)} onClick={() => setStep(step + 1)} className="flex text-white items-center text-lg hover:cursor-pointer">
-              next➡️
-            </button>
-          </div>
-          </form>}
-          {step ===3 && <form onSubmit={handleSubmit}>
-          {/* <div className='my-4 '>
-            <p className='ml-2 mb-2 text-[16px]'>Referral</p>
-            <input onChange={(e) => setReferral(e.target.value)} value={referral} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
-          </div> */}
-
-          <div className='my-4 '>
+            
+            <div className=''>
                 <p className='ml-2 mb-2 text-[16px]'>Registering for bootcamp*</p>
                 <select
                   required={true}
@@ -165,9 +124,9 @@ const Register = () => {
                   <option value="Ethereum">Ethereum</option>
                 </select>
             </div>
-          </form>}
-
-        {step ===3 && <button disabled={!(user.bootcamp)} type="submit" onClick={handleSubmit} className={`border-2 w-[12rem] mr-4 border-[#003979] font-semibold rounded-full px-12 py-3 mt-7 inline-block hover:bg-[#1B2430] hover:text-white`}>{loading? "Loading..." : "SUBMIT"}</button>}
+            
+            <button disabled={!(user.bootcamp)} type="submit" onClick={handleSubmit} className="mx-auto bg-gradient-to-r from-indigo-600 to-blue-600 px-[3rem] py-[0.5rem] rounded-md shadow-md md:text-[16px]">{loading? "Loading..." : "SUBMIT"}</button>
+          </form>
 
         </div>
         </div>

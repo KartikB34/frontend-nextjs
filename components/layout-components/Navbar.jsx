@@ -57,8 +57,8 @@ const Header = () => {
           <div>
             <div className={`md:none ${active? 'show':'hide'} `}>
                 <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md">
-                    <ul className="bg-gray-900 flex flex-col items-center text-lg rounded-md transition-all">
-                        <li className="p-1 cursor-pointer "><Link href="/bootcamps/ethereum" className="">Bootcamp</Link></li>
+                    <ul className="bg-slate-900 flex flex-col items-center text-lg rounded-md transition-all">
+                        <li className="p-1 "><Link href="/bootcamps/ethereum" className="">Bootcamp</Link></li>
                         {/* <li className="p-1 cursor-pointer "><Link href="/jobs" className="">Jobs</Link></li>
                         <li className="p-1 cursor-pointer "><Link href="/internships" className="">Internships</Link></li> */}
                         <li className="p-1 cursor-pointer "><Link href="/aboutus" className="">About us</Link></li>
@@ -85,52 +85,7 @@ const Header = () => {
                   </ul>
             </div>
           </div>
-            <div className="flex items-center gap-2">
-              {
-                // need to access from cookies when cookies applied over whole site
-                (loginStatus) ?
-                <div className="flex relative items-center gap-2">
-                  <div  className='cursor-pointer '>
-                    <div onClick={()=> {setOpen(!open)}} className="flex items-center relative">
-                      <CgProfile size={30}/>
-                      <AiFillCaretDown size={13}  /> 
-                    </div> 
-                  </div> 
-
-                  {/* Dropdown Content */}
-                              
-                  { open &&
-                    <div className="bg-gray-900 text-sm md:text-lg absolute right-4 shadow-lg top-8 w-[153px] rounded-lg py-1">
-                      <div onClick={()=>{router.push("/"); setOpen(!open)}} className="flex flex-row px-3 py-1 hover:bg-indigo-800 hover:cursor-pointer"><AiFillHome className="h-6 mr-2" /> Home page</div>
-                      <div onClick={()=>{router.push("/dashboard"); setOpen(!open)}} className="flex flex-row px-3 py-1 hover:bg-indigo-800 hover:cursor-pointer"><MdOutlineSpaceDashboard className="h-6 mr-2" /> Dashboard</div>
-                      <div onClick={()=>{logout(); setOpen(!open)}} className="flex flex-row px-3 py-1 hover:bg-indigo-800 hover:cursor-pointer"><MdLogout className="h-6 mr-2" /> Sign out</div>
-                    </div>
-                  }
-                            
-
-                  {/* <div onClick={()=>logout()} className="cursor-pointer ">Sign out</div> */}
-                  </div>
-                  :
-                  <div className="flex items-center gap-3">
-                        <div  className='cursor-pointer '>
-                        <button>
-                          <Link href="/auth/login">
-                          <div className="flex items-center">
-                            Login
-                          </div>
-                          </Link>
-                        </button>
-                        </div> 
-
-                        <div  className='cursor-pointer'>
-                        <Link href="/auth/signup">
-                          <div className="flex items-center border border-white px-2 py-1 rounded-md hover:bg-white hover:text-black">
-                            Signup
-                          </div>
-                          </Link> 
-                        </div>
-                  </div>
-              }
+            <div className="flex md:hidden items-center gap-2">
                 <div onClick={toggle} className="w-[2rem] ml-2 md:hidden cursor-pointer">
                   <div className="w-full h-0.5 bg-gray-100 line rounded-md"></div>
                   <div className="w-full h-0.5 bg-gray-100 my-1.5 rounded-md"></div>

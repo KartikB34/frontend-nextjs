@@ -55,7 +55,7 @@ const Reviews = () =>{
 
   return (
   <div className='px-8 md:px-16'>
-    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center'>Reviews</p>
+    <p className=' pt-12 text-5xl font-semibold text-white items-center text-center my-6'>Reviews</p>
     <div className='block md:hidden w-[95%] mx-auto'>
     <Swiper
              slidesPerView={1}
@@ -68,7 +68,7 @@ const Reviews = () =>{
          >
             {people.map((person,i) => (
                 <SwiperSlide key={i}>
-                    <div className='flex flex-col p-8 items-center border-2 bg-gradient-to-br from-indigo-900 to-slate-900 border-white  justify-center rounded-md mb-10'>
+                    <div className='flex flex-col p-8 items-center bg-gradient-to-r from-indigo-900 to-blue-900 justify-center rounded-md mb-10'>
                         <picture className='flex items-center justify-center'>
                         <img
                             src={person.image}
@@ -99,7 +99,7 @@ const Reviews = () =>{
         >
             {people.map((person,i) => (
                 <SwiperSlide key={person.name}>
-                    <div className='flex h-[30rem] flex-col p-8 items-center border-2 w-[28rem] h-[35rem shadow-neutral-400 shadow-md rounded-3xl border-white justify-center m-20 mx-auto'>
+                    <div className='flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-gradient-to-r from-indigo-900 to-blue-900 shadow-md rounded-3xl justify-center m-20 mx-auto'>
                         <picture>
                         <img
                             src={person.image}

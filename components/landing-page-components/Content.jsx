@@ -37,35 +37,40 @@ const Content = ({content}) => {
     if (content === 'Placement')
     {
         return Placement.map((item)=><div className='flex items-center md:text-xl py-2'>
-            <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
+            
+
             <p>{item}</p>
         </div>)
     }
     else if (content === 'Mentorship')
     {
         return Mentorship.map((item)=><div className='flex items-center md:text-xl py-2'>
-            <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
+            
+
             <p>{item}</p>
         </div>)
     }
     else if (content === 'Experience')
     {
         return Experience.map((item)=><div className='flex items-center md:text-xl py-2'>
-            <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
+            
+
             <p>{item}</p>
         </div>)
     }
     else if (content === 'Learning')
     {
         return Learning.map((item)=><div className='flex items-center md:text-xl py-2'>
-            <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
+            
+
             <p>{item}</p>
         </div>)
     }
     else
     {
         return Ecosystem.map((item)=><div className='flex items-center md:text-xl py-2'>
-            <div className='bg-white rounded-full h-2 w-2 md:h-4 md:w-4 mr-3'></div>
+            
+
             <p>{item}</p>
         </div>)
     }

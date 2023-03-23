@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import JobCard from '../components/Job-Card/JobCard';
-import JobCardLoading from '../components/Job-Card/JobCardLoading';
+import JobCard from '../Job-Card/JobCard';
+import JobCardLoading from '../Job-Card/JobCardLoading';
 import axios from 'axios';
 
 

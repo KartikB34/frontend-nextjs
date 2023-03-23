@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import InternshipCard from "../components/Internship-card/Internship-Card"
-import JobCardLoading from '../components/Job-Card/JobCardLoading';
+import InternshipCard from "../Internship-card/Internship-Card"
+import JobCardLoading from '../Job-Card/JobCardLoading';
 import Axios from 'axios';
 
 export async function getStaticProps() {
