@@ -25,7 +25,7 @@ const Champions = () => {
                 </p>
                 <p className='text-xl mb-3'>(Blockchain Engineer)</p>
                 <p className='text-xl'>Company: Melisoft</p>
-                <p className='text-xl'>CTC: 30LPA</p>
+                <p className='text-xl font-bold'>CTC: 30LPA</p>
             </div>
 
             <div className='col-span-1 flex flex-col items-center place-self-center'>
@@ -38,7 +38,7 @@ const Champions = () => {
                 </p>
                 <p className='text-xl mb-3'>(Blockchain Engineer Intern)</p>
                 <p className='text-xl'>Company: Impactional Games</p>
-                <p className='text-xl'>Stipend: 12K</p>
+                <p className='text-xl font-bold'>Stipend: 12K</p>
             </div>
 
             <div className='col-span-1 flex flex-col items-center place-self-center'>
@@ -51,7 +51,7 @@ const Champions = () => {
                 </p>
                 <p className='text-xl mb-3'>(Blockchain Engineer Intern)</p>
                 <p className='text-xl'>Company: Impactional Games</p>
-                <p className='text-xl'>Stipend: 12K</p>
+                <p className='text-xl font-bold'>Stipend: 12K</p>
             </div>
 
         </div>
