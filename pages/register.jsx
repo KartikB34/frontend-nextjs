@@ -81,17 +81,17 @@ const Register = () => {
             <form className="flex flex-col gap-5">
               <div className=''> 
                 <p className='ml-2 mb-2 text-[16px]'>Name*</p>
-                <input required={true} onChange={(e) => setUser({...user, name:e.target.value})} value={user.name} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input placeholder="Vitalik buterin" required={true} onChange={(e) => setUser({...user, name:e.target.value})} value={user.name} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
 
               <div className=''>
               <p className='ml-2 mb-2 text-[16px]'>Email*</p>
-              <input onChange={(e) => setUser({...user, email: e.target.value})} required={true} value={user.email} type="email" className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+              <input placeholder="vitalik@isking.eth" onChange={(e) => setUser({...user, email: e.target.value})} required={true} value={user.email} type="email" className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
           
               <div className=''>
                 <p className='ml-2 mb-2 text-[16px]'>Phone Number*</p>
-                <input onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input placeholder="7070707070" onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
 
               <div className=''>
