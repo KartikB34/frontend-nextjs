@@ -8,8 +8,8 @@ const Champions = () => {
     <div className='px-8 pt-24 md:px-24 text-center'>
 
         <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md'>
-            <p className='px-8 md:px-24 md:text-center text-left text-3xl'>You can be in top 0.1% Web3 Developers!</p>    
-            <p className='px-8 md:px-24 md:text-center text-left mb-4 mt-4 text-3xl'>Whether you are a working professional or a student</p>
+            <p className='px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8'>You can be in top 0.1% Web3 Developers!</p>    
+            <p className='px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8'>Whether you are a working professional or a student</p>
         </div>
 
         <p className='text-5xl md:text-5xl mt-24 font-semibold'>Our Champions</p>

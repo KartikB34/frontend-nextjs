@@ -8,90 +8,83 @@ const EthereumCurriculum = () => {
 
     const content = [
         {
-            title: "Blockchain Fundamentals",
-            // title: "Week 1 & Week 2",
-            week:" Week 1 & Week 2",
-            desc: [
-                "History of the financial system.",
-                "Blockchain Fundamentals.",
-                "Understanding the Bitcoin mechanism.",
-                "Understanding Ethereum Mechanism.",
-                "JavaScript crash course.",
-            ],
-            last_point: "Project building in Javascript.",
-          },
-
+          title: "Blockchain Fundamentals",
+          week: "Week 1",
+          desc: [
+            "Introduction to blockchain technology and its applications",
+            "Understanding consensus algorithms (Proof of Work, Proof of Stake)",
+            "Public vs. Private blockchains",
+            "Cryptography basics and the role it plays in blockchain security",
+            "Introduction to smart contracts and decentralized applications (dApps)"
+          ],
+          last_point: null,
+        },
         {
-            title: "Smart contracts",
-            week:" Week 3 & Week 4",
-            desc: [
-                "Introduction to smart contracts.",
-                "Wallets.",
-                "Solidity basics with beginner projects",
-            ],
-            last_point: "Advance concepts of Solidity."
-          },
-
+          title: "Solidity",
+          week: "Week 2-3",
+          desc: [
+            "Introduction to Solidity programming language",
+            "Solidity syntax, variables, and data types",
+            "Writing and deploying your first smart contract on Ethereum",
+            "Understanding the role of gas in smart contract execution",
+            "Common smart contract vulnerabilities and how to avoid them"
+          ],
+          last_point: null,
+        },
         {
-            title: "Tools in Blockchain",
-            week:"Week 5 & Week 6",
-            desc: [
-                "Tools, Services and libraries in Blockchain.",
-                "Understanding the applications of blockchain",
-                "ERC standards",
-            ],
-            last_point: "Layers in Blockchain.",
-          },
-
+          title: "NFTs",
+          week: "Week 4",
+          desc: [
+            "Introduction to Non-Fungible Tokens (NFTs)",
+            "Creating, minting, and selling NFTs on Ethereum",
+            "Understanding ERC-721 and ERC-1155 NFT standards",
+            "NFT marketplaces and their role in the NFT ecosystem",
+            "NFT use cases beyond digital art, such as gaming and real estate"
+          ],
+          last_point: null,
+        },
         {
-            title: "Defi",
-            week:" Week 7, Week 8 & Week 9",
-            desc: [
-                "Introduction to DeFi.",
-                "Liquidity Pools.",
-                "Understanding Uniswap.",
-                "Brief understanding of crypto exchange.",
-                "Defi Project - Beginner Level.",
-                
-            ],
-            last_point: "Defi Project - Advance Level.",
-          },
-
+          title: "DeFi",
+          week: "Week 5-6",
+          desc: [
+            "Introduction to Decentralized Finance (DeFi)",
+            "DeFi protocols and applications on Ethereum (UniSwap, Aave, Compound, etc.)",
+            "Yield farming, staking, and liquidity mining",
+            "Flash loans and their impact on DeFi",
+            "Risks and challenges in DeFi and how to mitigate them"
+          ],
+          last_point: null,
+        },
         {
-            title: "NFTs",
-            week:" Week 10, Week 11 & Week 12",
-            desc: [
-                "Introduction to NFTs",
-                "Metadata and IPFS.",
-                "ERC721, ERC1155, ERC2981 etc.",
-                "Lazy Minting.",
-                "Fractional NFTs",
-                "Understanding OpenSea",
-                "NFT project - Beginner Level",
-            ],
-            last_point: "NFT project - Advance Level",
-          },
-
+          title: "DAOs",
+          week: "Week 7",
+          desc: [
+            "Introduction to Decentralized Autonomous Organizations (DAOs) and their role in governance",
+            "Building a DAO and deploying it on Ethereum",
+            "Exploring real-world use cases of DAOs on Ethereum"
+          ],
+          last_point: null,
+        },
         {
-            title: "DAO",
-            week:" Week 13, Week 14 & Week15",
-            desc: [
-                "Introduction to DAO.",
-                "Understanding AAVE and MakerDAO",
-                "Introduction to the Metaverse",
-            ],
-            last_point: "Understanding Sandbox",
-          },
-
+          title: "Metaverse and Gamification",
+          week: "Week 8",
+          desc: [
+            "Exploring the Metaverse and its potential impact on the future of work, social interaction, and entertainment",
+            "Gamification and incentivization in blockchain applications",
+            "Real-world use cases of gamification on Ethereum"
+          ],
+          last_point: null,
+        },
         {
-            title: "Interview preperation",
-            week:" Week 16",
-            desc: [
-                "",
-            ],
-            last_point: "",
-          },
-        ]
+          title: "Final Project",
+          week: null,
+          desc: [
+            "Building a decentralized application (dApp) that utilizes one or more of the concepts covered in the bootcamp"
+          ],
+          last_point: null,
+        },
+      ];
+      
 
   return (
     <div className='pt-8 mb-12'>
@@ -150,7 +143,7 @@ const EthereumCurriculum = () => {
                                 <div className='bg-gray-900 text-lg peer-checked:border-b-2 border-white max-h-0 peer-checked:max-h-20'><p className='p-5 my-auto'>{desc}</p></div>
                             );
                         })}
-                        {(i!=6 && i!=11) && <div className='bg-gray-900 text-lg max-h-0 peer-checked:max-h-20'><p className='p-5'>{item.last_point}</p></div>}
+                        
                         </label>
                     </div>
                 </>)})}
