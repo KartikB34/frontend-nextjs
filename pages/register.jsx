@@ -29,60 +29,58 @@ const Register = () => {
     console.log(step)
     const registered = () => toast("You're successfully registered, Thank you!");
 
-    import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+    const handleSubmit = (e) => {
+      e.preventDefault();
 
-  // Regular expressions for email and phone number format
-  const emailRegex = /^\S+@\S+\.\S+$/;
-  const phoneRegex = /^\d{10}$/;
+      // Regular expressions for email and phone number format
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      const phoneRegex = /^\d{10}$/;
 
-  if (
-    user.name &&
-    user.email &&
-    user.phone_no &&
-    user.experience &&
-    user.bootcamp &&
-    emailRegex.test(user.email) && // Validate email format
-    phoneRegex.test(user.phone_no) // Validate phone number format
-  ) {
-    setLoading(true);
-    base("register").create(
-      [
-        {
-          fields: {
-            name: user.name,
-            email: user.email,
-            phone_no: "+91" + user.phone_no,
-            city: user.city,
-            experience: user.experience,
-            bootcamp: user.bootcamp,
-            coupon: user.coupon,
-          },
-        },
-      ],
-      function (err, records) {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        records.forEach(function (record) {
-          console.log(record.getId());
-          console.log(user);
-        });
-        toast.success("Form submitted successfully!"); // Show success toast
-        setLoading(false);
-        registered();
-        router.push("/");
+      if (
+        user.name &&
+        user.email &&
+        user.phone_no &&
+        user.experience &&
+        user.bootcamp &&
+        emailRegex.test(user.email) && // Validate email format
+        phoneRegex.test(user.phone_no) // Validate phone number format
+      ) {
+        setLoading(true);
+        base("register").create(
+          [
+            {
+              fields: {
+                name: user.name,
+                email: user.email,
+                phone_no: "+91" + user.phone_no,
+                city: user.city,
+                experience: user.experience,
+                bootcamp: user.bootcamp,
+                coupon: user.coupon,
+              },
+            },
+          ],
+          function (err, records) {
+            if (err) {
+              console.error(err);
+              return;
+            }
+            records.forEach(function (record) {
+              console.log(record.getId());
+              console.log(user);
+            });
+            toast.success("Form submitted successfully!"); // Show success toast
+            setLoading(false);
+            router.push("/");
+          }
+        );
+      } else {
+        toast.error("Please fill all the values correctly");
       }
-    );
-  } else {
-    toast.error("Please fill all the values correctly");
-  }
-};
+    };
 
+ 
     return (
       <>
         <div className="pt-16 w-full text-[14px]">
