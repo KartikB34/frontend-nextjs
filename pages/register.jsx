@@ -32,7 +32,7 @@ const Register = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
 
-      if(user.name && user.email && user.phone_no && user.experience && user.city && user.bootcamp) {
+      if(user.name && user.email && user.phone_no && user.experience && user.bootcamp) {
         setLoading(true);  
         base('register').create([
           {
