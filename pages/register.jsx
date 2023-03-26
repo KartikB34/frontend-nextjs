@@ -29,9 +29,6 @@ const Register = () => {
     console.log(step)
     const registered = () => toast("You're successfully registered, Thank you!");
 
-    import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 const handleSubmit = (e) => {
   e.preventDefault();
 
