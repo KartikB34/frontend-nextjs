@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-
+import Link from 'next/link'
 const Fees = () => {
 
     const router = useRouter()
@@ -13,7 +13,7 @@ const Fees = () => {
         <div className="flex flex-wrap justify-between mt-16 items-center px-[10%]">
             <div className="flex flex-col items-center">
 
-                <div className='flex flex-col  md:flex-row my-20 items-center justify-center'>
+                <div className='flex flex-col gap-12 my-15 items-center justify-center'>
 
                     <div className='items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8'>
                         <div className='text-3xl md:text-7xl font-bold mb-1 '>₹19,999 Only</div>
@@ -21,7 +21,13 @@ const Fees = () => {
                         <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p>
                         {/* <p className='text-[16px] md:text-[24px] my-2'><b>Upfront fee:</b> ₹40,000</p> */}
                     </div>
-                    {/* <p className='text-[16px] md:text-[24px] my-2'>₹<b>90K : </b>Pay after placement</p> */}
+                    
+                    <Link 
+                    href='/register' 
+                    className='h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all'
+                    >
+                    Register now!
+                    </Link>
                     </div>
                 </div>
             </div>
