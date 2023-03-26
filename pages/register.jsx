@@ -30,9 +30,8 @@ const Register = () => {
     const registered = () => toast("You're successfully registered, Thank you!");
 
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-
+const handleSubmit = (e) => {
+  e.preventDefault();
       // Regular expressions for email and phone number format
       const emailRegex = /^\S+@\S+\.\S+$/;
       const phoneRegex = /^\d{10}$/;
