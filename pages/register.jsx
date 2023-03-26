@@ -29,40 +29,56 @@ const Register = () => {
     console.log(step)
     const registered = () => toast("You're successfully registered, Thank you!");
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
 
-      if(user.name && user.email && user.phone_no && user.experience && user.bootcamp) {
-        setLoading(true);  
-        base('register').create([
-          {
-              fields : {
-                  name: user.name,
-                  email: user.email,
-                  phone_no: '+91' + user.phone_no,
-                  city: user.city,
-                  experience: user.experience,
-                  bootcamp: user.bootcamp,
-                  coupon: user.coupon
-              }
+const handleSubmit = (e) => {
+  e.preventDefault();
+      // Regular expressions for email and phone number format
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      const phoneRegex = /^\d{10}$/;
+
+      if (
+        user.name &&
+        user.email &&
+        user.phone_no &&
+        user.experience &&
+        user.bootcamp &&
+        emailRegex.test(user.email) && // Validate email format
+        phoneRegex.test(user.phone_no) // Validate phone number format
+      ) {
+        setLoading(true);
+        base("register").create(
+          [
+            {
+              fields: {
+                name: user.name,
+                email: user.email,
+                phone_no: "+91" + user.phone_no,
+                city: user.city,
+                experience: user.experience,
+                bootcamp: user.bootcamp,
+                coupon: user.coupon,
+              },
+            },
+          ],
+          function (err, records) {
+            if (err) {
+              console.error(err);
+              return;
+            }
+            records.forEach(function (record) {
+              console.log(record.getId());
+              console.log(user);
+            });
+            toast.success("Form submitted successfully!"); // Show success toast
+            setLoading(false);
+            router.push("/");
           }
-        ], function(err, records) {
-          if (err) {
-            console.error(err);
-            return;
-          }
-          records.forEach(function (record) {
-            console.log(record.getId());
-            console.log(user)
-          });
-        });
-        setLoading(false)
-        registered()
-        router.push('/')
-      } else{
-        toast.error("Please fill all the values");
+        );
+      } else {
+        toast.error("Please fill all the values correctly");
       }
-    }
+    };
+
  
     return (
       <>
@@ -91,7 +107,7 @@ const Register = () => {
           
               <div className=''>
                 <p className='ml-2 mb-2 text-[16px]'>Phone Number*</p>
-                <input placeholder="7070707070" onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className=' bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
+                <input placeholder="7070707070" onChange={(e) => setUser({...user, phone_no: e.target.value})} required={true} type="tel" value={user.phone_no} className='bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md' />
               </div>
 
               <div className=''>
