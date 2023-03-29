@@ -27,57 +27,94 @@ const Register = () => {
 
     const [step, setStep] = useState(1)
     console.log(step)
-    const registered = () => toast("You're successfully registered, Thank you!");
 
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+    const handleSubmit = (e) => {
+      e.preventDefault();
       // Regular expressions for email and phone number format
       const emailRegex = /^\S+@\S+\.\S+$/;
       const phoneRegex = /^\d{10}$/;
-
-      if (
-        user.name &&
-        user.email &&
-        user.phone_no &&
-        user.experience &&
-        user.bootcamp &&
-        emailRegex.test(user.email) && // Validate email format
-        phoneRegex.test(user.phone_no) // Validate phone number format
-      ) {
-        setLoading(true);
-        base("register").create(
-          [
-            {
-              fields: {
-                name: user.name,
-                email: user.email,
-                phone_no: "+91" + user.phone_no,
-                city: user.city,
-                experience: user.experience,
-                bootcamp: user.bootcamp,
-                coupon: user.coupon,
-              },
-            },
-          ],
-          function (err, records) {
-            if (err) {
-              console.error(err);
-              return;
-            }
-            records.forEach(function (record) {
-              console.log(record.getId());
-              console.log(user);
-            });
-            toast.success("Form submitted successfully!"); // Show success toast
-            setLoading(false);
-            router.push("/");
-          }
-        );
-      } else {
-        toast.error("Please fill all the values correctly");
+      // Object to store error messages
+      const errors = {};
+    
+      if (!user.name) {
+        errors.name = "Please enter your name";
       }
+    
+      if (!user.email) {
+        errors.email = "Please enter your email address";
+      } else if (!emailRegex.test(user.email)) {
+        errors.email = "Please enter a valid email address";
+      }
+    
+      if (!user.phone_no) {
+        errors.phone_no = "Please enter your phone number";
+      } else if (!phoneRegex.test(user.phone_no)) {
+        errors.phone_no = "Please enter a valid 10-digit phone number";
+      }
+    
+      if (!user.experience) {
+        errors.experience = "Please select your experience level";
+      }
+    
+      if (!user.bootcamp) {
+        errors.bootcamp = "Please select your bootcamp preference";
+      }
+    
+      if (Object.keys(errors).length > 0) {
+        // Display error messages for the user
+        const errorMessages = Object.values(errors).join(", ");
+        toast.error(`Please fill all the values correctly: ${errorMessages}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        return;
+      }
+    
+      setLoading(true);
+      base("register").create(
+        [
+          {
+            fields: {
+              name: user.name,
+              email: user.email,
+              phone_no: "+91" + user.phone_no,
+              city: user.city,
+              experience: user.experience,
+              bootcamp: user.bootcamp,
+              coupon: user.coupon,
+            },
+          },
+        ],
+        function (err, records) {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          records.forEach(function (record) {
+            console.log(record.getId());
+            console.log(user);
+          });
+          toast.success("Form submitted successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }); // Show success toast
+          setLoading(false);
+          router.push("/");
+        }
+      );
     };
+    
 
  
     return (
